@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="Xam.Forms.CustomControls.Views.CustomEntryView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:Xam.Forms.CustomControls.CustomControls"
+             Title="Entry">
+    <Grid Padding="25" RowSpacing="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <customControls:CustomEntry Grid.Row="0" 
+                                    NextEntryName="surnameEntry"
+                                    Placeholder="Nombre"
+                                    ReturnType="Next" />
+        <customControls:CustomEntry x:Name="surnameEntry"
+                                    Grid.Row="1"
+                                    NextEntryName="phoneNumberEntry"
+                                    Placeholder="Apellidos"
+                                    ReturnType="Next" />
+        <customControls:CustomEntry x:Name="phoneNumberEntry"
+                                    Grid.Row="2"
+                                    NextEntryName="emailEntry"
+                                    Placeholder="Teléfono"
+                                    ReturnType="Next" />
+        <customControls:CustomEntry x:Name="emailEntry"
+                                    Grid.Row="3"
+                                    Placeholder="Email"
+                                    ReturnCommand="{Binding SaveCommand}"
+                                    ReturnType="Done" />
+
+        <Button Grid.Row="4" 
+                HeightRequest="50"
+                VerticalOptions="Start"
+                BorderColor="#CED345"
+                BorderWidth="2"
+                BackgroundColor="Transparent"
+                Command="{Binding SaveCommand}"
+                FontAttributes="Bold"
+                Text="Guardar"
+                TextColor="#CED345" />
+    </Grid>
+</ContentPage>

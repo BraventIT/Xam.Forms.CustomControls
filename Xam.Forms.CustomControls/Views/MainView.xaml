@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="Xam.Forms.CustomControls.Views.MainView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Custom controls">
+    <Grid Padding="25">
+        <!--  Place new controls here  -->
+        <Button HeightRequest="50"
+                VerticalOptions="Start"
+                BorderColor="#CED345"
+                BorderWidth="2"
+                FontAttributes="Bold"
+                BackgroundColor="Transparent"
+                Text="Entry"
+                TextColor="#CED345"
+                Command="{Binding EntrySelectedCommand}"/>
+    </Grid>
+</ContentPage>
